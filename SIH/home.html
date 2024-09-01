@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME-PAGE</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<!--header portion starts from here-->
+	<header>
+		<!--page wrap-->
+			
+			 <!--navigation bar-->
+			 <nav>
+				<div class="container">
+				<div class="logo">
+					<!--logo img daalni hain yahan-->
+					<img src="/sihimages/logo++.png" alt="">
+					
+				</div>
+				  <ul id="ownmenu" class="ownmenu">
+					 <li><a href="#">HOME</a></li>
+					 <li><a href="#">Events</a></li>
+					</li>
+					<li><a href="login1.html">login</a></li>
+					 <div class="dropdown">
+						<button class="dropbtn">Languages 
+						  <i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+						  <a href="#">English</a>
+						  <a href="#">Hindi</a>
+						  <a href="#">Tamil</a>
+						  <a href="#">Marathi</a>
+						  <a href="#">Bangla</a>
+						  <a href="#">gujrati</a>
+						</div>
+					
+			 </nav>
+		 </div>
+	 </header>
+	<!--header portion ends here-->
+	<!--gallery slider starts here-->
+<section class="gallery">
+<div class="slide-container">
+	
+	<div class="slides">
+		<img src="/sihimages/pillars.jpg" class="active">
+		<img src="/sihimages/dinohq.jpg" linear-gradient>
+		<img src="/sihimages/instru.jpg">
+		<img src="/sihimages/jar.jpg">
+		<img src="/sihimages/pots.jpg">
+		<!--title content starts here-->
+	
+
+    <div class="title">museo-mate</div>
+	<div class="subtitle">Discover the Wonders of Science: Reserve Your Exploration Today!</div>
+	<!-----buttons for booking and planning-->
+    <div class="btn">
+		
+	<div class="ticket"><a href="trial.html">book my ticket</a></div>
+	<div class="plan"><a href="#">plan your visit</a></div>
+	
+	</div>
+
+
+	</div>
+
+	<div class="buttons">
+		<span class="next">&#10095;</span>
+		<span class="prev">&#10094;</span>
+	</div>
+
+	<div class="dotsContainer">
+		<div class="dot active" attr='0' onclick="switchImage(this)"></div>
+		<div class="dot" attr='1' onclick="switchImage(this)"></div>
+		<div class="dot" attr='2' onclick="switchImage(this)"></div>
+		<div class="dot" attr='3' onclick="switchImage(this)"></div>
+		<div class="dot" attr='4' onclick="switchImage(this)"></div>
+	</div>
+
+</div>
+<!--gallery slider ends here-->
+
+<!--javascript functionality for gallery buttons starts here-->
+
+<script type="text/javascript">
+	
+	// Access the Images
+	let slideImages = document.querySelectorAll('.slides img');
+	// Access the next and prev buttons
+	let next = document.querySelector('.next');
+	let prev = document.querySelector('.prev');
+	// Access the indicators
+	let dots = document.querySelectorAll('.dot');
+
+	var counter = 0;
+
+	// Code for next button
+	next.addEventListener('click', slideNext);
+	function slideNext(){
+	slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+	if(counter >= slideImages.length-1){
+		counter = 0;
+	}
+	else{
+		counter++;
+	}
+	slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+	indicators();
+	}
+
+	// Code for prev button
+	prev.addEventListener('click', slidePrev);
+	function slidePrev(){
+	slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+	if(counter == 0){
+		counter = slideImages.length-1;
+	}
+	else{
+		counter--;
+	}
+	slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+	indicators();
+	}
+
+	// Auto slideing
+	function autoSliding(){
+		deletInterval = setInterval(timer, 3000);
+		function timer(){
+			slideNext();
+			indicators();
+		}
+	}
+	autoSliding();
+
+	// Stop auto sliding when mouse is over
+	const container = document.querySelector('.slide-container');
+	container.addEventListener('mouseover', function(){
+		clearInterval(deletInterval);
+	});
+
+	// Resume sliding when mouse is out
+	container.addEventListener('mouseout', autoSliding);
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Add click event to the indicator
+	function switchImage(currentImage){
+		currentImage.classList.add('active');
+		var imageId = currentImage.getAttribute('attr');
+		if(imageId > counter){
+		slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(imageId == counter){
+			return;
+		}
+		else{
+		slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+		}
+		indicators();
+	}
+</script>
+</section>
+<!--javascript functionality ends here-->
+
+</body>
+</html>

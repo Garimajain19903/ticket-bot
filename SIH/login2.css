@@ -1,0 +1,111 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 120px;
+    margin-bottom: 140px;
+    background-image: url(bgmuseum.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header{
+    background-color: #00d1c1;
+    
+ }
+ .museomate img{
+    width: 400px;
+   padding-left: 430px;
+ }
+
+.login-container {
+    background-color: #fff;
+    padding: 60px 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-top: 30px;
+}
+
+.login-form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.login-form label {
+    margin: 10px 0 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.login-form input,
+.login-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 6px;
+}
+
+.remember-me input {
+    margin-left: 10px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+   
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-btn {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social-btn.google {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.social-btn.apple{
+    background-color: black;
+    color: #fff;
+}
+

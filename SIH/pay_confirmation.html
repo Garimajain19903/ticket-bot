@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation Slip</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('museum-background.jpg'); /* Replace with the path to your museum background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .confirmation-slip {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .confirmation-slip h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2e86c1;
+        }
+        .confirmation-slip p {
+            margin: 10px 0;
+            color: #333;
+        }
+        .confirmation-slip .section {
+            border-bottom: 2px solid #2e86c1;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .confirmation-slip .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .confirmation-slip .important {
+            font-weight: bold;
+            color: #c0392b;
+        }
+        .confirmation-slip .thank-you {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #2e86c1;
+        }
+        .city-select {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .city-select label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #2e86c1;
+        }
+        .city-select select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #2e86c1;
+            background-color: #f8f9f9;
+            color: #333;
+            background-image: url('city-icon.png'); /* Replace with the path to your city icon */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+        }
+        .thank-you{
+            color: brown;
+        }
+        .feedback{
+            margin-top: 50px;
+            margin-bottom: 50px;
+    padding-left: 160px;
+}
+.feedback .continue-btn{
+    padding: 10px;
+    border-radius: 15px;
+    background-color:  #b1d8f2;
+}
+.feedback .continue-btn a{
+    text-decoration: none;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="confirmation-slip">
+        <h2>Payment Confirmation Slip</h2>
+        
+        <div class="section">
+            <p><strong>Museum Name:</strong> [Your Museum's Name]</p>
+            <p><strong>Booking Reference:</strong> [your reference number]</p>
+        </div>
+        <div class="section">
+            <p><strong>Visitor Name:</strong> [Visitor's Full Name]</p>
+            <p><strong>Date of Visit:</strong> [MM/DD/YYYY]</p>
+            <p><strong>Time of Entry:</strong> [HH:MM AM/PM]</p>
+            <p><strong>Number of Tickets:</strong> [Quantity]</p>
+            <p><strong>Ticket Type:</strong> [General Admission, Exhibit, etc.]</p>
+        </div>
+        <div class="section">
+            <p><strong>Total Amount Paid:</strong> [Currency Symbol][Total Amount]</p>
+            <p><strong>Payment Method:</strong> [Credit/Debit Card, UPI, PayPal, etc.]</p>
+        </div>
+        <div class="section">
+            <p><strong>Transaction ID:</strong> [Unique Transaction ID]</p>
+            <p><strong>Payment Date:</strong> [MM/DD/YYYY]</p>
+            <p><strong>Payment Time:</strong> [HH:MM AM/PM]</p>
+        </div>
+        <div class="section">
+            <p class="important">Please present this confirmation slip at the entrance.</p>
+            <p>Tickets are non-refundable and non-transferable.</p>
+            <p>For any inquiries, contact [Support Contact Information].</p>
+        </div>
+        <p class="thank-you" >Thank You for Your Purchase! Enjoy your visit to [Your Museum's Name]!</p>
+       <div class="feedback"> <button class="continue-btn">Download e-ticket</button>
+   &nbsp;
+   &nbsp; <button class="continue-btn"><a href="feedback.html">Give your feedback</a></button>
+</div>
+
+    </div>
+    <button class="continue-btn"><a href="advancedslider.html">back</a></button>
+
+
+</body>
+</html>

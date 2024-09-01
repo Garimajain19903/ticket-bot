@@ -1,0 +1,121 @@
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    height: 20vh;
+    position: relative;
+    display: grid;
+    padding-bottom: 150px;
+    grid-template-columns: 1fr 3fr;
+}
+.container .logo img{
+    position: absolute;
+    padding-bottom: 250px;
+    padding-left: 80px;
+    width: 285px;
+    height: 270px;
+}
+.container .ownmenu{
+    list-style: none;
+    display: grid;
+    position: inherit;
+    grid-template-columns: repeat(4,90px);
+    align-items: center;
+    justify-content: end;
+    column-gap: 20px;
+    
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    & li a:hover::after{
+        font-weight: bold;
+    background-color: red;
+    
+    }
+}
+.container .ownmenu a{
+    text-decoration: none;
+    cursor: pointer;
+  
+}
+header{
+    background-color: #00d1c1;
+}
+
+
+.form-container {
+    margin-top: 340px;
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00d1c1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b5a3;
+    
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+nav{
+    z-index: 10;
+}

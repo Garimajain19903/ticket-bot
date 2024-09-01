@@ -1,0 +1,112 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#c02425 , #f0cb35);
+    background-image: url(bgmuseum.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+header{
+   background-color: #00d1c1;
+   
+}
+.museomate img{
+   width: 400px;
+  padding-left: 430px;
+}
+
+.login-box {
+    display: grid;
+    background-color: #ffffff;
+    color: #003580;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.login-box h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    background-color: #0071c2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-button:hover {
+    background-color: #005999;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.social-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.social-button.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-button.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.social-button.apple {
+    background-color: #000;
+    color: white;
+}
+
+.create-account {
+    font-size: 0.9rem;
+}
+
+.create-account a {
+    color: #0071c2;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
